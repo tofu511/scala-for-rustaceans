@@ -1,0 +1,65 @@
+# Scala / sbt
+target/
+project/target/
+project/project/
+*.class
+*.log
+
+# sbt specific
+.cache
+.history
+.lib/
+dist/*
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala-IDE / Eclipse specific
+.scala_dependencies
+.worksheet
+.cache-main
+.cache-tests
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+.metals/
+.bloop/
+.bsp/
+metals.sbt
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Log files
+*.log
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# mise / SDKMAN
+.java-version
+.sdkman/
+
+# Node (if used for any tooling)
+node_modules/

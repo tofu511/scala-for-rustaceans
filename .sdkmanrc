@@ -1,0 +1,5 @@
+# SDKMAN configuration for this project
+# Use: sdk env install
+java=17.0.10-tem
+scala=2.13.13
+sbt=1.9.9
