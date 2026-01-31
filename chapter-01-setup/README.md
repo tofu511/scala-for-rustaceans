@@ -130,7 +130,7 @@ Let's create a simple "Hello, World!" program. This directory contains a working
 ### Project Structure
 
 ```
-chapter-01-setup/hello-world/
+chapter-01-setup/
 ├── build.sbt
 └── src/
     └── main/
@@ -140,7 +140,7 @@ chapter-01-setup/hello-world/
 
 ### The Code
 
-See [`hello-world/src/main/scala/HelloWorld.scala`](hello-world/src/main/scala/HelloWorld.scala):
+See [`src/main/scala/HelloWorld.scala`](src/main/scala/HelloWorld.scala):
 
 ```scala
 object HelloWorld {
@@ -192,7 +192,7 @@ fn main() {
 ### Running the Program
 
 ```bash
-cd hello-world
+cd chapter-01-setup
 sbt run
 ```
 
@@ -214,7 +214,7 @@ The REPL (Read-Eval-Print Loop) is great for experimentation:
 scala
 
 # Or start REPL with your project loaded
-cd hello-world
+cd chapter-01-setup
 sbt console
 ```
 
@@ -270,7 +270,7 @@ scala> :quit
 ## Exercises
 
 ### Exercise 1: Modify Hello World
-Edit `hello-world/src/main/scala/HelloWorld.scala` to:
+Edit `src/main/scala/HelloWorld.scala` to:
 1. Add your name to the greeting
 2. Create a list of your favorite programming languages
 3. Use `filter` to show only languages with more than 4 characters
@@ -306,22 +306,22 @@ greet("Rustacean")
 ## Common Issues and Solutions
 
 ### Issue: "No main class detected" when running `sbt run`
-**Solution**: Make sure you're in the correct directory! You need to be inside the `hello-world` directory, not `chapter-01-setup`:
+**Solution**: Make sure you're in the correct directory! You need to be inside `chapter-01-setup`:
 
 ```bash
 # Wrong - will fail
-cd chapter-01-setup
+cd chapter-01-setup/hello-world
 sbt run
 
 # Correct - will work
-cd chapter-01-setup/hello-world
+cd chapter-01-setup
 sbt run
 ```
 
 Each Scala project needs its own `build.sbt` file. The `sbt` command looks for `build.sbt` in the current directory.
 
 ### Issue: "Not a valid command: compile"
-**Solution**: You're not in a directory with `build.sbt`. Navigate to a project directory (e.g., `hello-world/`) that contains `build.sbt`.
+**Solution**: You're not in a directory with `build.sbt`. Navigate to a project directory (e.g., `chapter-01-setup/`) that contains `build.sbt`.
 
 ### Issue: "sdk: command not found"
 **Solution**: Install SDKMAN first: `curl -s "https://get.sdkman.io" | bash`
